@@ -1,0 +1,56 @@
+//register
+POST Http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "dat123",
+    "password": "dat"
+}
+
+// login
+###
+POST Http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "dat1",
+    "password": "dat"
+}
+
+###
+POST Http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc5NWQzYjg3NjkyMTFjYThlMmMzNTAiLCJpYXQiOjE2MTg3NTU2NTh9.MXLdM65U4wbqyP-RxA835usb_yl_rBnMl45N--7FBko
+
+{
+    "title": "Vuejs 1",
+    "description": "Vue js 1",
+    "url": "vuejs.org",
+    "status": "LEARNED"
+}
+
+###
+// all posts
+GET Http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc5NWQzYjg3NjkyMTFjYThlMmMzNTAiLCJpYXQiOjE2MjA5MTE1ODV9.V_7Xae0NNZoPuXYoZ2_WY9RuyrBeqbjq0PH7gbdfjks
+
+###
+PUT Http://localhost:5000/api/posts/609bf8bb3855174e347d6e1a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc5NWQzYjg3NjkyMTFjYThlMmMzNTAiLCJpYXQiOjE2MjA5MTE1ODV9.V_7Xae0NNZoPuXYoZ2_WY9RuyrBeqbjq0PH7gbdfjks
+
+{
+    "title": "React update 12",
+    "description": "React js",
+    "url": "react.org",
+    "status": "LEARNING"
+}
+
+###
+DELETE Http://localhost:5000/api/posts/6072bce910dd4425b07b08e6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZkYzQ1ZjU5M2Y5NzMwZjQwZjI2MTIiLCJpYXQiOjE2MTgxMzk4OTZ9.OYYHMX6yjGEMVcTSCyg0G_XmCbKm-EgmiJ1ApFaWEYQ
+
+###
+// check user logged in
+GET Http://localhost:5000/api/auth/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc0MjhlZmVhOWY1NjFhOWM5YzdjMTUiLCJpYXQiOjE2MTgzMTM3ODl9.uqZtO9Nu0zKusu1DgJ1CNR0J3QNbftdEHVgv8pYPbwg

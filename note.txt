@@ -1,0 +1,36 @@
+Mern (MongoDB Express React Node)
+
+Node package: npm i express jsonwebtoken mongoose dotenv argon2 cors
+npm i --save-dev nodemon
+
+config nodemon in package.json: 
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index"
+  },
+- Add extension in Vs Code: REST Client
+
+- Create app express basic:
+const express = require('express')
+
+const app = express()
+
+app.get('/', (req, res) => res.send('Hellow World'))
+
+const POST = 5000
+
+app.listen(POST, () => console.log(`Server started on post ${POST}`))
+
+MongoDB: Setup mongoDB
+
+mongodb+srv://dattd153:12345@mern-app.9fljb.mongodb.net/Mern-app?retryWrites=true&w=majority
+
+2: 30
+
+protected route
+Higher-Order Components
+3:03
+3:24
+3:35
+4:03
+4:11
